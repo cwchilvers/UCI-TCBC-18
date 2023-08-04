@@ -1,4 +1,3 @@
-const { ObjectId } = require('mongodb');
 const { User, Thought } = require('../models');
 
 module.exports = {
@@ -25,7 +24,7 @@ module.exports = {
                 .lean();
 
             if (!user) {
-                return res.status(404).json({ message: 'No user with that ID' });
+                return res.status(404).json({ message: `No user with ID ${req.params.userId}` });
             }
 
             res.json({
@@ -38,6 +37,7 @@ module.exports = {
         }
     },
 
+    // Create a new user
     async newUser(req, res) {
         try {
             const user = await User.create(req.body);
@@ -53,7 +53,7 @@ module.exports = {
             const user = await User.findOneAndRemove({ _id: req.params.userId });
 
             if (!user) {
-                return res.status(404).json({ message: 'No such user exists' })
+                return res.status(404).json({ message: `No such user with ID ${req.params.userId}`})
             }
 
             // Delete all thoughts associated with user
@@ -61,7 +61,7 @@ module.exports = {
 
             if (!thought) {
                 return res.status(404).json({
-                    message: 'User deleted, but no thoughts found'
+                    message: `User ${user.username} deleted, but no thoughts found`
                 })
             }
 
