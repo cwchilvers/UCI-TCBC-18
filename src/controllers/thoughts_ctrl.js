@@ -59,6 +59,11 @@ module.exports = {
         }
     },
 
+    // Update thought
+    async updateThought(req, res) {
+
+    },
+
     // Add a reaction to a thought
     async addReaction(req, res) {
         try {
@@ -79,8 +84,8 @@ module.exports = {
         }
     },
 
-    // Delete a reaction from a thought
-    async deleteReaction(req, res) {
+    // Remove a reaction from a thought
+    async removeReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
@@ -98,9 +103,4 @@ module.exports = {
             return res.status(500).json(err);
         }
     },
-
-    // Update thought
-    async updateThought(req, res) {
-
-    }
 };

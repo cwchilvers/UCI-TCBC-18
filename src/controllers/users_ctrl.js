@@ -1,4 +1,4 @@
-const { User, Thought } = require('../models');
+const { User, Thought } = require('../models/models');
 
 module.exports = {
     // Get all users
@@ -75,5 +75,59 @@ module.exports = {
     // Update a user
     async updateUser(req, res) {
 
-    }
+    },
+
+    // Add a user to a user's friend list
+    async addFriend(req, res) {
+        try {
+            const user = await User.findOne({ _id: req.params.userId });
+            const friend = await User.findOne({ _id: req.params.friendId });
+
+            if (!user) {
+                return res.status(404).json({ message: `No user with ID ${req.params.userId}` });
+            }
+
+            if (!friend) {
+                return res.status(404).json({ message: `No user with ID ${req.params.friendId}` });
+            }
+
+            // Add friend to user's friend list
+            user.friends.push(friend);
+
+            // Save user
+            await user.save();
+
+            res.json(user);
+        } catch (err) {
+            console.log(err);
+            return res.status(500).json(err);
+        }
+    },
+
+    // Remove a user from a user's friend list
+    async removeFriend(req, res) {
+        try {
+            const user = await User.findOne({ _id: req.params.userId });
+            const friend = await User.findOne({ _id: req.params.friendId });
+
+            if (!user) {
+                return res.status(404).json({ message: `No user with ID ${req.params.userId}` });
+            }
+
+            if (!friend) {
+                return res.status(404).json({ message: `No user with ID ${req.params.friendId}` });
+            }
+
+            // Remove friend from user's friend list
+            user.friends.pull(friend);
+
+            // Save user
+            await user.save();
+
+            res.json(user);
+        } catch (err) {
+            console.log(err);
+            return res.status(500).json(err);
+        }
+    },
 };
