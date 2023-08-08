@@ -1,0 +1,48 @@
+{
+    "users": [
+        {
+            "username": "leeroyjenkins",
+            "email": "leeroy@example.com"
+        },
+        {
+            "username": "waifuhunter",
+            "email": "waifu@example.com"
+        },
+        {
+            "username": "JediMaster2001",
+            "email": "jedi@example.com"
+        },
+        {
+            "username": "NoobSlayerX",
+            "email": "noob@example.com"
+        },
+        {
+            "username": "xXDarkShadowXx",
+            "email": "darkshadow@example.com"
+        },
+        {
+            "username": "DragonSlayer3000",
+            "email": "dragonslayer@example.com"
+        },
+        {
+            "username": "gamerGoober",
+            "email": "goober@example.com"
+        },
+        {
+            "username": "PCMasterRace",
+            "email": "pcmasterrace@example.com"
+        },
+        {
+            "username": "SniperMaster2000",
+            "email": "snipermaster@example.com"
+        },
+        {
+            "username": "ShadowNinja666",
+            "email": "ninjashadow@example.com"
+        },
+        {
+            "username": "bob",
+            "email": "bob@example.com"
+        }
+    ]
+}
