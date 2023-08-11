@@ -25,9 +25,7 @@ module.exports = {
                 return res.status(404).json({ message: `No user with ID ${req.params.userId}` });
             }
 
-            res.json({
-                user,
-            });
+            return res.json({user});
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -66,7 +64,7 @@ module.exports = {
             // Delete user's thoughts
             await Thought.deleteMany({ username: user.username });            
     
-            res.json({ message: `User ${user.username} deleted successfully` });
+            return res.json({ message: `User ${user.username} deleted successfully` });
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -87,7 +85,7 @@ module.exports = {
                 return res.status(404).json({ message: `No user with ID ${req.params.userId}` });
             }
 
-            res.json(updatedUser);
+            return res.json(updatedUser);
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -113,7 +111,7 @@ module.exports = {
             user.friends.push(friend);
             await user.save();
 
-            res.json(user);
+            return res.json(user);
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -139,7 +137,7 @@ module.exports = {
             user.friends.pull(friend);
             await user.save();
 
-            res.json(user);
+            return res.json(user);
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);

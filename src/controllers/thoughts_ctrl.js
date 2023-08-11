@@ -25,9 +25,7 @@ module.exports = {
                 return res.status(404).json({ message: `No thought with ID ${req.params.thoughtId}`});
             }
 
-            res.json({
-                thought,
-            });
+            return res.json({thought});
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -39,9 +37,9 @@ module.exports = {
     async newThought(req, res) {
         try {
             const thought = await Thought.create(req.body);
-            res.json(thought);
+            return res.json(thought);
         } catch (err) {
-            res.status(500).json(err);
+            return res.status(500).json(err);
         }
     },
 
@@ -63,7 +61,7 @@ module.exports = {
                 { runValidators: true, new: true }
             );
 
-            res.json({ message: `Thought with ID ${req.params.thoughtId} deleted` });
+            return res.json({ message: `Thought with ID ${req.params.thoughtId} deleted` });
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -84,7 +82,7 @@ module.exports = {
                 return res.status(404).json({ message: `No thought with ID ${req.params.thoughtId}` });
             }
     
-            res.json(updatedThought);
+            return res.json(updatedThought);
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -105,7 +103,7 @@ module.exports = {
                 return res.status(404).json({ message: `No thought with ID ${req.params.thoughtId}`});
             }
 
-            res.json(thought);
+            return res.json(thought);
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -126,7 +124,7 @@ module.exports = {
                 return res.status(404).json({ message: `No thought with ID ${req.params.thoughtId}`});
             }
 
-            res.json(thought);
+            return res.json(thought);
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);

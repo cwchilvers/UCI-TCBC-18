@@ -1,9 +1,9 @@
-const connection = require('../../config/connection');
-const { User, Thought } = require('../../src/models/models');
+const connection = require('../config/connection');
+const { User, Thought } = require('../src/models/models');
 
-const userSeeds = require('./users.json');
-const thoughtSeeds = require('./thoughts.json');
-const reactionSeeds = require('./reactions.json');
+const userSeeds = require('./seeds/users.json');
+const thoughtSeeds = require('./seeds/thoughts.json');
+const reactionSeeds = require('./seeds/reactions.json');
 
 connection.on('error', (err) => err);
 

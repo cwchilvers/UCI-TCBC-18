@@ -4,7 +4,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "seed": "node db/seeds/seed.js"
+    "seed": "node db/seed.js"
   },
   "author": "Chandler Chilvers",
   "license": "MIT",
