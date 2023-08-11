@@ -14,7 +14,7 @@
 
 ## Table of Contents
 1. [Description](#description)
-2. [Walkthrough Video](#walkthrough-video)
+2. [Video Demonstration](#video-demonstration)
 3. [Requirements](#requirements)
 4. [Installation](#installation)
 5. [Usage](#usage)
@@ -26,8 +26,8 @@
 ## Description
 This is a backend API for a social network. It uses Express.js for routing, MongoDB for the database, and Mongoose for the ODM. The API allows users to create, read, update, and delete users, thoughts, and reactions. Users can also add and remove friends.
 
-## Walkthrough Video
-[Walkthrough Video](https://drive.google.com/file/d/1IC2sCg2qf7GC4nu7y_eURj7bAvkGD7zd/view?usp=sharing)
+## Video Demonstration
+[Video Demonstration](https://drive.google.com/file/d/1IC2sCg2qf7GC4nu7y_eURj7bAvkGD7zd/view?usp=sharing)
 
 ## Requirements
 * Node.js
