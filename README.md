@@ -3,31 +3,25 @@
 </h1>
 
 <p align="center">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge" alt="JavaScript">    
     <img src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-    <img src="https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white" alt="Express">
+    <img src="https://img.shields.io/badge/Express-000?logo=express&logoColor=fff&style=for-the-badge" alt="Express.js">
     <img src="https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white" alt="MongoDB">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License">
-</p>
 </p>
 
 <h4 align="center">Backend API for a social network.</h4>
 
 ## Table of Contents
 1. [Description](#description)
-2. [Video Demonstration](#video-demonstration)
-3. [Requirements](#requirements)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Technologies Used](#technologies-used)
-7. [Credits](#credits)
-8. [License](#license)
-9. [Contact Information](#contact-information)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Technologies Used](#technologies-used)
+6. [License](#license)
+7. [Contact Information](#contact-information)
 
 ## Description
 This is a backend API for a social network. It uses Express.js for routing, MongoDB for the database, and Mongoose for the ODM. The API allows users to create, read, update, and delete users, thoughts, and reactions. Users can also add and remove friends.
-
-## Video Demonstration
-[Video Demonstration](https://drive.google.com/file/d/1IC2sCg2qf7GC4nu7y_eURj7bAvkGD7zd/view?usp=sharing)
 
 ## Requirements
 * Node.js
@@ -85,16 +79,9 @@ The API can be tested using Insomnia or Postman. The following routes are availa
 
 ## Technologies Used
 * JavaScript
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-
-## Credits
 * [Node.js](https://nodejs.org/en/)
 * [Express.js](https://expressjs.com/)
 * [MongoDB](https://www.mongodb.com/)
-* [Mongoose](https://mongoosejs.com/)
 
 ## License
 This project is licensed under the MIT License. See the [MIT License](https://opensource.org/licenses/mit/) page for details.
