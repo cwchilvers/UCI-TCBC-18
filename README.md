@@ -17,8 +17,9 @@
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [Technologies Used](#technologies-used)
-6. [License](#license)
-7. [Contact Information](#contact-information)
+6. [Contact Information](#contact-information)
+7. [License](#license)
+
 
 ## Description
 This is a backend API for a social network. It uses Express.js for routing, MongoDB for the database, and Mongoose for the ODM. The API allows users to create, read, update, and delete users, thoughts, and reactions. Users can also add and remove friends.
@@ -83,12 +84,11 @@ The API can be tested using Insomnia or Postman. The following routes are availa
 * [Express.js](https://expressjs.com/)
 * [MongoDB](https://www.mongodb.com/)
 
-## License
-This project is licensed under the MIT License. See the [MIT License](https://opensource.org/licenses/mit/) page for details.
-
 ## Contact Information
 <p align="center">
     <a href="mailto:cwchilvers@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
     <a href="https://github.com/cwchilvers"><img src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub"></a>
 </p>
 
+## License
+This project is licensed under the MIT License. See the [MIT License](https://opensource.org/licenses/mit/) page for details.
